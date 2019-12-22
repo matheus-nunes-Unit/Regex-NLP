@@ -1,0 +1,67 @@
+##Definição##
+Regex: Uma micro linguagem capaz de detectar expressões regulares em uma frase de maneira precisa, simples e rápida.
+A ideia do regex é encontrar padrões em um determinado texto, como por exemplo, detectarmos um provedor de email dado um email.
+EX: matheusnalmeida@alura.com | Provedor a ser detectado: @alura.
+
+##Meta-Caracteres##
+O regex e constituido de alguns meta-caracteres que nada mais sao que caracteres especiais que conseguem detectar uma cadeia 
+de caracteres ou padroes em uma determinada sentença
+
+#Caracter .
+O caracter . representara qualquer caracter com excessão do caracter quebra de linha. Quando usado na regex, o mesmo ira 
+dar match(ser compativel) com qualquer caracter da frase.
+
+#Caracter \
+O caracter \ ira fazer com que o caracter que esteja a sua frente nao seja considerado como um meta caracter e sim como 
+um caracter literal.
+
+#Caracter ()
+O caracter () representa um grupo de elementos que devem ser analizados ao se verificar os matchs de uma determinada senten�a. 
+Os elementos que estiverem dentro do grupo devem ser separados por |.
+Exemplo: (alura|gmail)
+
+#Caracter []
+O caracter [] ira representar uma cadeia de caracteres. O mesmo pode ser utilizado para que se de match em uma palavra que 
+possua em seu meio um dos caracteres presentes nacadeia de caracteres.
+Exemplo: a[lt]ura => O match sera dado caso na sentenca contenha um conjunto de caracteres sendo ou atura ou alura.
+OBS#1: Caso se queira representar um intervalo de caracteres alfa numericos no regex, somente sera necessario escrever o 
+caracter de inicio e fim com um - entre os mesmos. Ex:[a-z] => representa qualquer caracter entre a e z.
+OBS#2:Caso se queria representar um intervalo de 0 a 9 em regex, somente sera necessario escrever \d que sera a representacao
+de decimal.
+
+#Caracter *
+O caracter * sera um caracter de repeticao que ira basicamente fazer com que o caracter que venha antes do mesmo possa ser
+repetido 0 até n vezes.
+Exemplo:[a-z]* => Sera dado mach caso aparecer 0 ou n caracteres que estejam no intervalo de "a até z"
+
+#Caracter +
+O caracter + e similar ao *, sendo que sua principal diferenca sera que o mesmo ira dar match quando o caracter anterior
+se repetir de 1 até n vezes, sendo assim , o caracter tera de aparecer ao menos uma vez.
+Exemplo:[a-z]* => Sera dado mach caso aparecer 1 ou n caracteres que estejam no intervalo de "a até z"
+
+#Caracter {}
+O caracter {} ira representar um intervalo, sendo este intervalo responsavel por ditar o minimo e o maximo de vezes que o
+caracterior anterior a ele podera se repetir.
+Exemplo:[a-z]{1,5} => Podera se repetir ate de 1 ate 5 caracteres que vao de "a até z"
+
+#Caracter ?
+O caracter ? ira representar que o caracter antecessor ao mesmo podera aparacer 0 ou 1 vez na expressao regular.
+Exemplo:[a-z]? => Podera se aparecer na frase 0 ou 1 caracter que va de "a até z".
+
+#Caracter ^
+O caracter ^ ira representar o primeiro caracter da string, sendo que sera dado match, caso a string se inicie com o caracter
+que esta após o ^.
+Exemplo:^s.* => Sera dado match em qualquer string que inicie com a letra s
+
+#Caracter $
+O caracter $ ira representar o ultimo caracter da string, sendo que sera dado match, caso a string finalize com o caracter
+que esta antes do $.
+Exemplo:.*r$ => Sera dado match em qualquer string que finalize com a letra r.
+
+##Exercicios##
+
+#Regex para cpf => \d{2}[.| ]?\d{3}[.| | -]?\d{3}
+
+
+##Site para treino de regex para teste de regex##
+https://regex101.com/r/ljJSzR/4/
