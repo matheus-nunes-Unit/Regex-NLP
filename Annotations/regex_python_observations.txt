@@ -1,0 +1,35 @@
+#Python Library
+Para utilizarmos as expressoes regulares e seus principais metodos no python iremos importar a biblioteca "re".
+
+#Metodos da bibilioteca re
+Abaixo seguem alguns metodos da biblioteca re e sua devidas funcionalidades.
+
+1)findall = Dado como parametro a regex e a string a ser analisada, sera retornado um vetor contendo todas as partes do
+texto que foram dadas matchs de acordo com a expressao regular.
+Ex: re.findall(r"<.*?>","<p>Olá</p>") => Sera retornado uma lista contendo [<p>,</p>]
+
+2)sub = Dado como parametro a regex,o texto que ira substituir os caracteres que foram dados matchs na regex e o texto
+principal, sera substituido no texto principal todos os caracteres que foram dados matchs pelo texto que foi passsado como
+parametro para substituir os caracteres.
+Ex: re.sub(r"<.*?>","teste","<p>Olá</p>") = > Resultara no seguinte texto: "testeOláteste"
+
+3)search = Dado como parametro o regex e um texto a ser analisado, o metodo ira retornar um objeto do tipo "Match", que
+ira conter algumas informacoes como por exemplo qual o(s) texto(s) que foram dados matchs e a posição do mesmo.
+Ex: re.search(r"yoda","Ola mestre yoda.") => Sera retornado um objeto que contem algumas informacoes(como intervalo
+da string que foi dada match e a string em si) e metodos.
+
+4)compile = Dado como parametro uma string que representa a regex, o mesmo ira retornar um objeto do tipo "compile", que 
+sera o regex compilado. Dessa maneira podemos chamar alguns metodos de maneira mais simples diretamente por esse objeto, como
+por exemplo o search, que se chamado atraves do objeto compile nao necessitara que se passe mais a regex como parametro e 
+sim somente o texto. Alem da simplificacao dos metodos, temos o fato de que a chamada dos mesmo se torna extremamente mais
+rapida, pois a regex ja foi compilada previamente.
+Ex. re.compile(r"yoda") => Sera compilada a regex para indetificar o texto yoda em uma string.
+
+#Observações acerca das regex na biblioteca re:
+1) Ao se utilizar determinada regex a ser indentificada em um texto, caso se for indetificar caracteres de string literal,
+recomenda-se utilizar o r na frente do literal, pois assim sera garantido que a expressao sera indentificada como um literal
+e não como um caracter especial.
+Ex: r"/n" = Sera identificado no o texto o caracter "/" seguido do caracter "n".
+    "/n" =  Sera identificado o caracter quebra de linha.
+
+
