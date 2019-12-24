@@ -5,7 +5,7 @@ from timeit import timeit
 
 informations = LoadingInformations()
 
-questao = informations.getQuestao(2)
+questao = informations.get_questao_pt(2)
 
 #Encontrando todas as tags html das questoes
 tags_founded = re.findall(r"<.*?>",questao)

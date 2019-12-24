@@ -62,7 +62,7 @@ Exemplo:.*r$ => Sera dado match em qualquer string que finalize com a letra r.
 
 #Regex para cpf => \d{2}[.| ]?\d{3}[.| | -]?\d{3}
 #Regex para tags HTML => <.*?>
-
+#Regex para tag code e seu conteudo => <code>(.|(\n))*?</code>
 
 ##Site para treino de regex para teste de regex##
 https://regex101.com/r/ljJSzR/4/
