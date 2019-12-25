@@ -32,4 +32,13 @@ e não como um caracter especial.
 Ex: r"/n" = Sera identificado no o texto o caracter "/" seguido do caracter "n".
     "/n" =  Sera identificado o caracter quebra de linha.
 
+2) O caracter /w na regex representa qualquer caracter alfanumerico(caracteres de a - z e numericos).
+Ex: r"[^w]" => Ira dar match com qualquer caractere que nao represente alfanumerico(geralmente acentos e espaços em branco).
 
+3) O acento circunflexo quando usado dentro de colchetes(cadeia de caracteres) fara com que seja dado match com todos os
+caracteres que forem complementares ao caractere seguinte do acento, ou seja, todos os outros caracteres com excessao do
+que esta na frente do circunflexo.
+Ex: r"[^a]" => Sera dado match com qualquer caractere com excessão do a.
+
+4) O caracter /s na regex representa qualquer caracter espaço em branco(como por exemplo /t e /n).
+Ex: r"[^s]" => Ira dar match com qualquer caractere que nao represente espaço em branco.
