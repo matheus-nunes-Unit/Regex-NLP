@@ -1,0 +1,11 @@
+##NLTK(Natural Language Tool Kit)##
+
+#Funcoes da biblioteca NLTK
+
+1)bigrams: Metodo responsavel por retornar os bigrams dado um texto como parametro. O mesmo se localiza no modulo nltk.utils.
+Ex:bigrams(texto_a_ser_processado)
+
+2)pad_both_ends: Metodo responsavel por adicionar fake chars no primeiro e no ultimo caracter do bigrama, para que assim a 
+quantidade de caracteres fique a mesma para todos os caracteres da frase, dado como parametro um texto e a quantidade
+n de gramas que o mesmo esta sendo dividido. O mesmo se localiza no modulo nltk.lm.preprocessing.
+Ex: pad_both_ends(texto_a_ser_processado,n = 2)#Sendo n a quantidade de elementos de cada n-grama.

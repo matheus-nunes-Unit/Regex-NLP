@@ -1,0 +1,12 @@
+##Conceitos##
+
+1)n-grama: n-grama é uma sequencia de n itens(podem ser palavras,letras,entre outros) adjacentes dentro de um texto. 
+Se tivermos um n grama com tamanho 1,teremos um unigrama, com tamanho 2 teremos um bigrama e assim sucessivamente. Dada a 
+palavra alura poderiamos separar os unigramas da mesma considerando as letras. Ao lado seguem os unigramas:[a,l,u,r,a]. 
+No meio deste conceito, podemos falar sobre os modelos n-gram, que nada mais é que um modelo que ira predizer a proxima
+palavra de uma frase baseado na ocorrencia das n-1 palavras anteriores. Estes modelos podem ser uteis para varias situações, 
+como por exemplo, um corretor ortografico.
+
+2)fake chars = Os caracteres falsos, ou fake char, são caracteres especiais adicionados no início e fim de cada frase ou
+palavra (dependendo da forma que construir o modelo), que indicam o início e fim de cada palavra (ou frase) para o algoritmo, 
+gerando por consequência a distribuição de probabilidades correta.

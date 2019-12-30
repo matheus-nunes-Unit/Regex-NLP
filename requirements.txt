@@ -4,6 +4,7 @@ decorator==4.4.1
 ipython==7.10.2
 ipython-genutils==0.2.0
 jedi==0.15.2
+nltk==3.4.5
 numpy==1.18.0
 pandas==0.25.3
 parso==0.5.2
