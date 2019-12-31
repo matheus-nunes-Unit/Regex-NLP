@@ -39,4 +39,7 @@ Ex:MLE(2) => Instanciando um modelo de bigramas.
     5.4)perplexity = A perplexidade é uma medida que podemos utilizar para que nos tenhamos uma noção se nosso modelo esta
     bom ou ruim. Quando menor o valor de perplexidade, mais aderente(boa em prever a amostra) o teste é ao modelo. Podemos
     testar e verificar o valor de perplexidade de um modelo MLE, passando como parametro para o mesmo um determinado bigrama de
-    palavra ou frase.
+    palavra ou frase. A perplexidade pode gerar uma situacao chamada de perplexidade infinita, que ocorre quando nos colocamos
+    um dado de teste, que nunca foi visto em um dado treino, gerando como consequencia uma probabilidade nula e uma perplexidade
+    tendendo ao infinito. Para simplificarmos o calculo da perplexidade, podemos dizer que a mesma é o inverso da probabilidade
+    (1/P(W) sendo w o elemnto a ser analisado dentro de um conjunto).
