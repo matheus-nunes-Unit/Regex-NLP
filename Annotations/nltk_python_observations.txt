@@ -9,3 +9,34 @@ Ex:bigrams(texto_a_ser_processado)
 quantidade de caracteres fique a mesma para todos os caracteres da frase, dado como parametro um texto e a quantidade
 n de gramas que o mesmo esta sendo dividido. O mesmo se localiza no modulo nltk.lm.preprocessing.
 Ex: pad_both_ends(texto_a_ser_processado,n = 2)#Sendo n a quantidade de elementos de cada n-grama.
+
+3)WhitespaceTokenizer().tokenize() = Dado um texto como parametro, ira separar todas as palavras do mesmo levando em 
+consideracao o espaço em branco.
+Ex:WhitespaceTokenizer().tokenize(texto_a_ser_tokenizado)
+
+4)padded_everygram_pipeline:Metodo responsavel por dado o numero maximo n de n-gramas e um conjunto de sentenças, o mesmo ira
+gerar dois retornos. Um sera um vetor que ira conter os n-gramas de cada sentença(ja incluindo os fake chars), e o outro 
+retorno sera um vetor contendo todos os vocabulos(palavras caso se tenha passado varias frases e letras caso se tenham 
+passadas varias palavras) das sentenças ou palavras passadas como parametro.
+padded_everygram_pipeline(2,sentenças) =>Ira gerar os vocabulos e um vetor contendo os unigramas e bigramas das sentenças
+
+5)MLE: Tambem chamado de Modelo de linguagem de maxima verossimilhança, este modelo precisa ser iniciado especificando
+o tipo de n-gramas que iremos utilizar(passamos 1 se estivermos trabalhando com unigrama e 2 se estivermos bigrama).Abaixo
+seguem algum dos metodos que podemos utilizar com esse modelo.
+Ex:MLE(2) => Instanciando um modelo de bigramas.
+
+    5.1)fit = Ira treinar o modelo, sendo necessario passar como parametro os bigramas e os vocabulos gerados.
+    Ex:modelo.fit(bigramas,vocabulos)
+
+    5.2)generate = Ira gerar uma frase ou palavra(dependendo de como foi treinado), sendo necessario passar o numero de letras
+    ou palavras(dependendo de como foi treinado).
+    Ex:modelo.generate(num_words=3)
+
+    5.3)count = Dado como parametro um dados caracter ou palavra(dependendo de como foi treinado) ira retornar um dicionario de
+    frequencia, mostrando a probabilidade de se vim um determinado character após o caracter passado como parametro.
+    Ex.modelo.count[['m']].items()
+
+    5.4)perplexity = A perplexidade é uma medida que podemos utilizar para que nos tenhamos uma noção se nosso modelo esta
+    bom ou ruim. Quando menor o valor de perplexidade, mais aderente(boa em prever a amostra) o teste é ao modelo. Podemos
+    testar e verificar o valor de perplexidade de um modelo MLE, passando como parametro para o mesmo um determinado bigrama de
+    palavra ou frase.

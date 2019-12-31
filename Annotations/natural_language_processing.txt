@@ -10,3 +10,7 @@ como por exemplo, um corretor ortografico.
 2)fake chars = Os caracteres falsos, ou fake char, são caracteres especiais adicionados no início e fim de cada frase ou
 palavra (dependendo da forma que construir o modelo), que indicam o início e fim de cada palavra (ou frase) para o algoritmo, 
 gerando por consequência a distribuição de probabilidades correta.
+
+3)Tokenizadores: Tokenizadores nada mais são do que objetos capazes de dividir uma determindada cadeia de caracteres em tokens,
+seguindo um determinado padrão. Podemos citar como exemplo a divisão considerando os espaços em branco, fazendo com que as
+palavras que tiverem separadas por espaço em branco sejam divididas como tokens.

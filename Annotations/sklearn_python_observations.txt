@@ -1,0 +1,13 @@
+##SKLEARN##
+
+#Conceito
+O sklearn é uma famosa biblioteca em python utilizada para criação de modelos de aprendizagem de maquina, facilitando desde
+a divisao dos dados para treino e teste, até a criação de diferentes modelos dependendo do negocio que estaj sendo tratado.
+
+#Metodos
+Algumas das funções da bilbioteca seguem abaixo:
+
+1)train_test_split: Dado uma matriz ou array, ira dividir os dados em sets de treino e teste de forma randomica. Os parametros
+que podem ser passados para a função sao os seguintes respectivamente: Dados de treino,porcentagem dos dados a serem utilizados
+para teste(test_size) e um numero aleatorio(random_state), que funcionara como uma chave para que caso venhamos a dividir novamente os
+dados de treino e testes, os mesmos nao venha a ser divididos de maneira diferente.
