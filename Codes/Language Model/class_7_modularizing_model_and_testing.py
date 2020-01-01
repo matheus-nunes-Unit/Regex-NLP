@@ -6,7 +6,7 @@ from nltk.lm import MLE
 from nltk.util import bigrams
 from pprint import pprint
 
-def treinando_modelo(lista_de_textos):
+def treinando_modelo_MLE(lista_de_textos):
     #Salvando todas as frases em uma unica variavel
     todas_as_questoes = " ".join(lista_de_textos)
     #Separando as palavras do texto levando em consideração o espaço em branco
@@ -41,9 +41,9 @@ if __name__ == "__main__":
     en_treino,en_teste = train_test_split(dados_ingles["questoes tratadas"],test_size = 0.2,random_state = 123)
     esp_treino,esp_teste = train_test_split(dados_espanhol["questoes tratadas"],test_size = 0.2,random_state = 123)
     #Gerando modelos a partir da função
-    modelo_port = treinando_modelo(pt_treino)
-    modelo_en = treinando_modelo(en_treino)
-    modelo_esp = treinando_modelo(esp_treino)
+    modelo_port = treinando_modelo_MLE(pt_treino)
+    modelo_en = treinando_modelo_MLE(en_treino)
+    modelo_esp = treinando_modelo_MLE(esp_treino)
     #Testando a perplexidade
     print(calcular_perplexidade(modelo_port,pt_teste.iloc[0]))
     #Demonstrando a perplexidade infinita

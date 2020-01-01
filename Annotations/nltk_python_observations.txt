@@ -43,3 +43,9 @@ Ex:MLE(2) => Instanciando um modelo de bigramas.
     um dado de teste, que nunca foi visto em um dado treino, gerando como consequencia uma probabilidade nula e uma perplexidade
     tendendo ao infinito. Para simplificarmos o calculo da perplexidade, podemos dizer que a mesma é o inverso da probabilidade
     (1/P(W) sendo w o elemnto a ser analisado dentro de um conjunto).
+
+6)Laplace = O modelo de Laplace é um modelo baseado na tecnica de laplace(tambem conhecida como add one). Esta tecnica é
+uma tecnica de suavização que ira fazer com que a nossa probabilidade nunca seja 0, evitando assim a perplexidade infinita.
+O uso desse modelo e similar ao do MLE,sendo que para iniciarmos esse modelo, especificamos o tipo de n-gramas que iremos
+utilizar(passamos 1 se estivermos trabalhando com unigrama e 2 se estivermos bigrama).
+Ex:Laplace(2) => Instanciando um modelo de bigramas.
